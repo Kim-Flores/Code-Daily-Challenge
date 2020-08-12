@@ -15,3 +15,9 @@ function removeExclamationMarks(s) {
     return s.replace(regexReplacement, replacement)
   }
 }
+
+//other solution
+
+function removeExclamationMarks(s) {
+  return s.replace(/!/gi, '');
+}
