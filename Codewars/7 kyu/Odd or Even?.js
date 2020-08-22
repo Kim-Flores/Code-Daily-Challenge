@@ -16,6 +16,21 @@ odd_or_even([0, -1, -5])  ==  "even"
 //Solution:
 function oddOrEven(array) {
    //enter code here
+  if (array==0) return 'even';
+  
+  var arraySum = array.reduce((a,b)=>a+b);
+  
+  if (arraySum % 2==0){
+    return 'even';
+  }else{
+    return 'odd';
+  }
+}
+
+// other solutions:
+
+function oddOrEven(array) {
+   //enter code here
   let arraySum = 0;
   for(let i = 0; i < array.length; i++){
     arraySum += array[i];
@@ -26,8 +41,6 @@ function oddOrEven(array) {
     return "odd";
   }
 }
-
-// other solution:
 
 function oddOrEven(arr) {
   return arr.reduce((a,b)=>a+b,0) % 2 ? 'odd' : 'even';
