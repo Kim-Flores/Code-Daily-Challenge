@@ -15,3 +15,28 @@ Output string must be two numbers separated by a single space, and highest numbe
 */
 
 //Solution:
+function highAndLow(numbers){
+  // ...
+  let numArr = numbers.split(' ').sort((a,b)=> a-b)
+  return numArr[numArr.length-1] + ' ' + numArr[0]
+  
+//   if(numArr.length == 1){
+//     return numArr[0] + ' ' + numArr[0]
+//   }
+//   else{
+//   return numArr.pop() + ' ' + numArr.shift()
+//   }
+}
+
+//Other solution:
+function highAndLow(numbers){
+  // ...
+  let numArr = numbers.split(' ').sort((a,b)=> a-b)
+  return numArr[numArr.length-1] + ' ' + numArr[0]
+  if(numArr.length == 1){
+    return numArr[0] + ' ' + numArr[0]
+  }
+  else{
+  return numArr.pop() + ' ' + numArr.shift()
+  }
+}
